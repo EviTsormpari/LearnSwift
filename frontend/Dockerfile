@@ -11,8 +11,7 @@ COPY ./ /app
 RUN npm install -g http-server
 
 # Set the environment variable for the API URL
-#Put the backend url here
-ENV API_URL=
+ENV API_URL=http://localhost:8080
 
 # Expose the port for the server
 EXPOSE 80
