@@ -13,6 +13,7 @@ To run this project, make sure you have the following tools installed:
 - **Docker Desktop**: [Download Docker Desktop](https://www.docker.com/products/docker-desktop)
 - **Java 8+** (for the backend)
 - **PostgreSQL** (for database management, configured via Docker)
+- - Development Enviroment (IDE) such as Intellij IDEA, Eclipse or Visual Studio Code
 
 ---
 
