@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tutoring App</title>
+    <link rel="stylesheet" href="StudentView.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Online Tutoring App</h1>
+        
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="courseSearchInput" placeholder="Search for courses">
+                <button onclick="searchCourses()">Search Courses</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="instructorSearchInput" placeholder="Search for instructors">
+                <button onclick="searchInstructors()">Search Instructors</button>
+            </div>
+        </div>
+        
+        <div>
+            <button onclick="showBookings()">View My Bookings</button>
+            <button onclick="showUserProfile()">My Profile</button>
+        </div>
+        
+        <div id="resultsContainer">
+            <div id="searchResults"></div>
+            <div id="bookings" class="hidden"></div>
+            <div id="instructorInfo" class="hidden"></div>
+            <div id="courseDetails" class="hidden"></div>
+            <div id="userProfile" class="hidden"></div>
+        </div>
+        
+        <div id="reviewForm" class="hidden">
+            <h2>Leave a Review</h2>
+            <div class="star-rating">
+                <span onclick="setRating(5)">☆</span>
+                <span onclick="setRating(4)">☆</span>
+                <span onclick="setRating(3)">☆</span>
+                <span onclick="setRating(2)">☆</span>
+                <span onclick="setRating(1)">☆</span>
+            </div>
+            <textarea id="reviewText" placeholder="Write your review here" rows="4"></textarea>
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+    </div>
+
+    <div id="bookingPage" class="hidden">
+        <h2>Book a Course</h2>
+        <form id="bookingForm">
+            <label for="bookingDate">Select Date:</label>
+            <input type="date" id="bookingDate" required>
+            <label for="startTime">Start Time:</label>
+            <select id="startTime" required></select>
+            <label for="endTime">End Time:</label>
+            <select id="endTime" required></select>
+            <button type="submit">Confirm Booking</button>
+            <button type="button" onclick="closeBookingPage()">Cancel</button>
+        </form>
+    </div>
+
+    <div id="overlay" class="overlay hidden"></div>
+      
+      <script src="StudentView.js"></script>
+</body>
+</html>

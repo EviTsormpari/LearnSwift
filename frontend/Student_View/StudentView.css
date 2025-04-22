@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.search-bar {
+    flex: 1;
+    display: flex;
+}
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+input, select, button, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+input {
+    flex: 1;
+}
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #555;
+}
+#resultsContainer {
+    flex: 1;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.result-item, .booking-item, .review-item, .course-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete-booking, .book-course, .leave-review, .view-instructor-info, .view-details {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.delete-booking {
+    background: #f44336;
+}
+.view-instructor-info, .view-details {
+    background: #2196F3;
+}
+.star-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+}
+.star-rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.star-rating > span:hover:before,
+.star-rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: gold;
+}
+.hidden {
+    display: none;
+}
+#reviewForm, #instructorInfo, #courseDetails, #userProfile, #bookingPage {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.user-info {
+    margin-bottom: 15px;
+}
+.user-info label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+.instructor-courses {
+    margin-bottom: 20px;
+}
+.instructor-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+#bookingPage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+}
+#bookingPage h2 {
+    margin-bottom: 20px;
+}
+#bookingPage form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#bookingPage label {
+    font-weight: bold;
+}
+#bookingPage input[type="date"],
+#bookingPage select {
+    width: 100%;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
